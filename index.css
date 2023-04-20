@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+
+
+    position: absolute;
+    justify-content: space-around;
+    
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 180px;
+    padding: 1px 0;
+    font-weight: lighter;
+    font-family: "Raleway";
+    
+}
+
+
+.style{
+    padding-top: 100px;
+    font-weight: lighter;
+}
+
+
+.line{
+
+    width: 67px;
+    height: 2px;
+    margin-left: 9px;
+    background-color: green;
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
+
+*:nth-child(2):hover * .line{
+transform: translate(100px);
+color: green;
+transition: all .4s ease-in-out;
+}
+
+*:nth-child(2):hover{
+    color: green;
+}
+
+*:nth-child(3):hover * .line{
+    transform: translate(100px);
+    color: green;
+transition: all .4s ease-in-out;
+
+    }
+    
+
+    *:nth-child(1):hover * .line{
+        transform: translate(100px);
+        color: green;
+transition: all .4s ease-in-out;
+
+        }
+        
+
+
+.gallary{
+    display: flex;
+    padding-top:100px;
+    justify-content: space-between;
+    column-gap: 180px;
+    padding-left: 40px;
+}
+
+
+
+
+.gallary img{
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product{
+    height: 100vh;
+    background-color:whitesmoke;
+    width: 100%;
+    position: relative;
+    margin-left: 400px;
+}
+.payment{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
+    box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87)
+}
+.payTitle{
+    font-size: 20px;
+    color: lightgray;
+}
+.label{
+    font-size: 14px;
+    font-weight: 300;
+}
+.payInput{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.payInput::placeholder{
+color: lightgrey;
+}
+.cardIcon{
+    margin-right: 10px;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm{
+width: 100%;
+}
+
+
+
+
+.productImg{
+    width: 50%;
+}
+.productDetails{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+    margin-right: -445px;
+}
+.productTitle{
+    font-size: 75px;
+    font-weight: 030;
+}
+.productDesc{
+    font-style: 24px;
+    color: gray;
+}
+.colors, .sizes{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.color{width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: beige;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.color:last-child{
+    background-color: black;
+}
+
+.size{
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+
+.size:hover{
+    background-color: black;
+}
+
+
+.productButton{
+    float: right;
+    padding: 10px 20px;
+    background-color: rgb(100, 247, 100);
+    color: white;
+    font-weight: lighter;
+    margin-right: -200px;
+    border: none;
+    width: 15em;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.productButton:hover{
+background-color: rgb(92, 245, 92);
+color: rgb(98, 238, 98);
+border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

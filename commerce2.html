@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="commerce.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+
+</head>
+<body>
+    
+
+
+
+
+<form action="pay.html" method="POST">
+    <div class=" nav container">
+
+
+
+        <nav>
+    
+            <a href="index.html">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a>
+            <a style="margin-left: 1000px;padding-bottom: 200px;" href =""><i class="fa-solid fa-dollar-sign" id="cart-icon"></i></a>
+    
+    
+    
+      <div class="line"></div>
+     <div class="cart">
+    
+    
+        <div class="cart-content">
+    
+            <div class="cart-box">
+    
+                <img src="1.png" alt="" class="cart-img">
+                <div class="detail-box">
+                    <div class="cart-product-title">Apollo running short</div>
+                    <div class="cart-price">$50.00</div>
+                    <input type="number" value="1" class="cart-quantity">
+                </div>
+                <i class="fa fa-trash cart-remove "></i>
+            </div>
+        </div>
+    
+    <div class="total">
+    
+        <div class="total-title">Total</div>
+        <div class="total-price">$10</div>
+    
+    
+    </div>
+    <div class="colors">
+        <div class="color"></div>
+        <div class="color"></div>
+       </div>
+
+
+
+       <div class="sizes">
+        <div class="size">XS</div>
+        <div class="size">S</div>
+        
+
+   </div>
+
+
+
+    <button type="submit" class="btn-buy">Buy Now</button>
+    <i class="fa fa-window-close" id="cart-close"></i>
+     </div>
+    
+        </nav>
+    
+    
+    
+    
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <section class="shop-container">
+
+    
+    
+    
+    
+    
+    
+        <div class="shop-content">
+            <div class="product-box">
+          <img src="1.png" alt="" class="product-img">
+          <h2 class="product title">Apollo running</h2>
+    <span class="product-price">$50.00</span>
+    <i class="fa-solid fa-dollar-sign add-cart"></i>
+          
+    
+    
+            </div>
+    
+    
+    
+    
+            <div class="product-box">
+                <img src="2.png" alt="" class="product-img">
+                <h2 class="product title">Apollo running</h2>
+          <span class="product-price">$50.00</span>
+          <i class="fa-solid fa-dollar-sign add-cart"></i>
+                
+          
+          
+                  </div>
+    
+    
+    
+    
+    
+                  <div class="product-box">
+                    <img src="3.png" alt="" class="product-img">
+                    <h2 class="product title">Way flyer</h2>
+              <span class="product-price">$75.00</span>
+              <i class="fa-solid fa-dollar-sign add-cart"></i>
+                    
+              
+              
+                      </div>
+    
+    
+    
+    
+                   
+    
+        </div>
+    
+    
+    
+    
+        <div class="shop-content">
+            <div class="product-box">
+          <img src="1.png" alt="" class="product-img">
+          <h2 class="product title">normal wear</h2>
+    <span class="product-price">$80.00</span>
+    <i class="fa-solid fa-dollar-sign add-cart"></i>
+          
+    
+    
+            </div>
+    
+    
+    
+    
+            <div class="product-box">
+                <img src="2.png" alt="" class="product-img">
+                <h2 class="product title">Apollo running</h2>
+          <span class="product-price">$50.00</span>
+          <i class="fa-solid fa-dollar-sign add-cart"></i>
+                
+          
+          
+                  </div>
+    
+    
+    
+    
+    
+                  <div class="product-box">
+                    <img src="3.png" alt="" class="product-img">
+                    <h2 class="product title">Way flyer</h2>
+              <span class="product-price">$75.00</span>
+              <i class="fa-solid fa-dollar-sign add-cart"></i>
+                    
+              
+              
+                      </div>
+    
+    
+    
+    
+                   
+    
+        </div>
+    
+    
+    </section>
+    
+
+</form>
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+        const cartIcon = document.querySelector("#cart-icon");
+        const cart = document.querySelector(".cart");
+        const closeCart = document.querySelector("#cart-close");
+        
+        
+        
+        
+        
+        
+        cartIcon.addEventListener("click", () => {
+        
+        cart.classList.add("active");
+        });
+        
+        
+        closeCart.addEventListener("click", () => {
+        
+        cart.classList.remove("active");
+        });
+
+
+
+
+
+        if(document.readyState == "loading"){
+
+            document.addEventListener('DOMEContentLoaded', start);
+
+        }else{
+            start();
+        }
+
+
+    
+    
+
+    function start(){
+        addEvents();
+    }
+
+    
+function update(){
+    addEvents();
+  updateTotal();
+}
+
+
+function addEvents(){
+    let cartRemove_btns = document.querySelectorAll('.cart-remove');
+    console.log(cartRemove_btns);
+   cartRemove_btns.forEach((btn) =>{
+
+    btn.addEventListener("click", handle_removeCartItem);
+   });
+
+
+   let cartQuantity_inputs = document.querySelectorAll('.cart-quantity');
+   cartQuantity_inputs.forEach(input => {
+
+input.addEventListener("change", handle_changeItemQuantity);
+
+   });
+
+
+
+
+
+   let addCart_btns = document.querySelectorAll(".add-cart");
+   addCart_btns.forEach(btn =>{
+
+    byn.addEventListener("click", handle_removeCartItem);
+   });
+
+
+
+
+}
+
+
+
+function handle_addCartItem(){
+
+    let product = this.parentElement;
+    let title = product.querySelector(".product-title").innerHTML;
+    let price = product.querySelector(".product-price").innerHTML;
+    let imgSrc = product.querySelector(".product-img").innerHTML;
+  console.log(title, price, imgSrc);
+  let newToAdd = {
+
+    title,
+    price,
+    imgSrc,
+  };
+
+
+
+  if(itemsAdded.find(el => el.title == newToAdd.title)){
+
+    alert("This Item Already Existed!")
+    return;
+  }else{
+    itemsAdded.push(newToAdd);
+  }
+
+  let cartBoxElement = CartBoxComponent(title, price, imgSrc);
+  let newNode = document.createElement("div");
+  newNode.innerHTML = cartBoxElement
+  const cartContent = cart.querySelector(".cart-content");
+  cartContent.appendChild(newNode);
+
+
+  update();
+}
+
+
+
+
+
+
+
+function handle_removeCartItem(){
+
+    this.parentElement.remove();
+itemsAdded = itemsAdded.filter(el=>el.title != this.parentElement.querySelector('.cart-product-title'), innerHTML)
+
+    update();
+
+    function handle_changeItemQuantity(){
+
+        if(isNaN(this.value) || this.value < 1 ){
+            this.value = 1;
+        }
+        this.value = Math.floor(this.value);
+        update();
+    }
+}
+
+
+
+function updateTotal(){
+
+    let cartBoxes = document.querySelectorAll('cart-box');
+    const totalElement = cart.querySelector('.total-price');
+    let total = 0;
+    cartBoxes.forEach((cartBoxes) =>{
+
+        let priceElement = cartBox.querySelector('..cart-price');
+        let price = parseFloat(priceElement.innerHTML.replace("$",""))
+        let quantity = cartBox.querySelector(".cart-quantity").value;
+
+        total += price * quantity;
+
+    });
+
+
+    total = total.toFixed(2);
+//total = Math.round(total * 100) / 100;
+    totalElement.innerHTML = "$" + total;
+
+}
+    
+function CartBoxComponent(title, price, imgSrc){
+
+    
+
+   return` 
+    <div class="cart-box">
+    
+    <img src=${imgSrc} alt="" class="cart-img">
+    <div class="detail-box">
+        <div class="cart-product-title">${title}</div>
+        <div class="cart-price">${price}</div>
+        <input type="number" value="1" class="cart-quantity">
+    </div>
+    <i class="fa fa-trash cart-remove "></i>
+</div>`
+
+
+
+}
+
+            
+
+        </script>
+        
+
+
+
+
+</body>
+</html>
